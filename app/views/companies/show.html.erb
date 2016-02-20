@@ -1,0 +1,15 @@
+<p>
+	<strong>Company:</strong>
+	<%=@company.company %>
+	<%= link_to 'Edit', edit_company_path(@company) %>
+	<%= link_to 'Destroy', company_path(@company),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+    <h2>Locations</h2>
+    <%= render @company.locations %>
+ 
+<h2>Add a location:</h2>
+<%= render 'locations/form' %>
+	<%= link_to 'Back', companies_path %>
+</p>
