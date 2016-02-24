@@ -1,0 +1,20 @@
+<div id="filterrific_results">
+
+  <div>
+    <%= page_entries_info companies%>
+  </div>
+
+  <table>
+    <tr>
+      <th>Company</th>
+    </tr>
+    <% companies.each do |company| %>
+      <tr>
+        <td><%= link_to company.company, company_path(company)%></td>
+        
+      </tr>
+    <% end %>
+  </table>
+</div>
+
+<%= will_paginate companies%>
