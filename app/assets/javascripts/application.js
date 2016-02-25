@@ -15,4 +15,10 @@
 //= require turbolinks
 //= require_tree .
 //= require bootstrap.min
-//= require filterrific/filterrific-jquery
+//= require select2
+
+$(document).ready(function(){
+  $('select').select2({
+    theme: "bootstrap"
+});
+});

@@ -6,16 +6,7 @@ class CompaniesController < ApplicationController
     	@company = Company.find(params[:id])
     end
     def index
-       @filterrific = initialize_filterrific(
-        Company,
-        params[:filterrific]
-      ) or return
-      @companies = @filterrific.find.page(params[:page])
-
-      respond_to do |format|
-        format.html
-        format.js
-      end
+        @companies = Company.all
     end
 
     def show
